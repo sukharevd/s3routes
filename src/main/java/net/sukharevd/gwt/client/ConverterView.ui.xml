@@ -2,7 +2,18 @@
              xmlns:g='urn:import:com.google.gwt.user.client.ui'
              xmlns:b="urn:import:com.github.gwtbootstrap.client.ui">
     <g:FlowPanel>
+        <b:Navbar>
+            <b:Nav>
+                <b:NavLink href="/index.html">IT Blog</b:NavLink>
+                <b:NavLink href="/portfolio/index.html">Portfolio</b:NavLink>
+                <b:NavLink href="/info/index.html">About me</b:NavLink>
+            </b:Nav>
+        </b:Navbar>
+        <b:Row>
+            <b:Column offset="1" size="12">
 
+            </b:Column>
+        </b:Row>
         <b:Row>
             <b:Column offset="1" size="12">
                 <b:PageHeader>AMAZON S3 REDIRECTION RULES CONVERTER</b:PageHeader>
@@ -14,12 +25,16 @@
                     human readable text format to valid XML. To use it, insert your redirection rules into
                     the text area below as plain text. Each line should contain only one redirection rule
                     that consists of the source URL, one or many whitespaces, and destination URL. There are
-                    some examples commented in the text area.</b:Paragraph>
+                    several examples commented in the text area.</b:Paragraph>
 
                 <b:Paragraph>When you type/insert redirection rules in plain text format, click "Convert
                     to XML" button to obtain result. After that you can copy-paste generated result to
                     AWS Console (Amazon S3 - bucket's Properties - Static Website Hosting -
                     Edit Redirection Rules).</b:Paragraph>
+
+                <b:HelpBlock>This tool is an extension of article
+                    <b:Button type="LINK" addStyleNames="coloured-link" href="http://sukharevd.net/generating-routing-rules-for-amazon-s3-bucket.html">Generating routing rules for Amazon S3 bucket</b:Button>
+                    you might want to get acquainted with.</b:HelpBlock>
             </b:Column>
         </b:Row>
 
@@ -42,7 +57,6 @@
             </b:Column>
         </b:Row>
 
-
         <b:Row>
             <b:Column offset="1" size="12">
                 <b:PageHeader>Resulting XML</b:PageHeader>
@@ -50,9 +64,12 @@
                               type="DEFAULT"
                               close="false"
                               animation="true"
-
                               visible="false" />
-                <b:TextArea ui:field="dstTextArea" size="12" height="300px"/>
+                <b:TextArea ui:field="dstTextArea"
+                            size="12"
+                            readOnly="true"
+                            height="300px"
+                            addStyleNames="read-only-result"/>
             </b:Column>
         </b:Row>
 

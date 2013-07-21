@@ -16,6 +16,18 @@ import com.google.gwt.user.client.ui.FlowPanel;
 public class ConverterView extends Composite {
 
     public static final int MAX_ALLOWED_ROUTES = 50;
+    public static final String REDIRECTION_RULE_EXAMPLES =
+        "# This is a comment.\n" +
+        "#\n" +
+        "# Please insert your source redirection rules to this area after/instead of comments.\n" +
+        "#\n" +
+        "# Examples of redirection rules:\n" +
+        "# old-url.html                       new-url.html\n" +
+        "# index.php                          index.html\n" +
+        "#\n" +
+        "# old-directory/                     new-directory/\n" +
+        "#\n" +
+        "# internal/page.html            http://external.domain.com/index.html\n";
 
     @UiTemplate("ConverterView.ui.xml")
     interface ConverterViewUiBinder extends UiBinder<FlowPanel, ConverterView> {}
@@ -28,18 +40,7 @@ public class ConverterView extends Composite {
 
     public ConverterView() {
         initWidget(uiBinder.createAndBindUi(this));
-        srcTextArea.setText(
-            "# This is a comment.\n" +
-            "#\n" +
-            "# Please insert your source redirection rules to this area after/instead of comments.\n" +
-            "#\n" +
-            "# Examples of redirection rules:\n" +
-            "# old-url.html                       new-url.html\n" +
-            "# index.php                          index.html\n" +
-            "#\n" +
-            "# old-directory/                     new-directory/\n" +
-            "#\n" +
-            "# internal/page.html            http://external.domain.com/index.html\n");
+        srcTextArea.setText(REDIRECTION_RULE_EXAMPLES);
     }
 
     @UiHandler("convertButton")
