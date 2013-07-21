@@ -44,5 +44,7 @@ this tool can give you valid XML ready to be inserted to AWS Console
         </RoutingRule>
     </RoutingRules>
 
-The project is a part of article <a target="_blank" href="http://sukharevd.net/generating-redirective-routing-rules-for-amazon-s3-bucket.html">Generating redirective routing rules for Amazon S3 bucket</a>
-and is available online <a target="_blank" href="http://sukharevd.net/static/files/blog/s3routes/index.html">here</a>.
+The project is a part of article <a target="_blank" href="http://sukharevd.net/generating-routing-rules-for-amazon-s3-bucket.html">Generating routing rules for Amazon S3 bucket</a>. 
+
+##Demo
+Application is available online <a target="_blank" href="http://sukharevd.net/static/files/blog/s3routes/index.html">here</a>.
