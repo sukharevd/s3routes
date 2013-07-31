@@ -33,7 +33,7 @@
                     Edit Redirection Rules).</b:Paragraph>
 
                 <b:HelpBlock>This tool is an extension of article
-                    <b:Button type="LINK" addStyleNames="coloured-link" href="http://sukharevd.net/generating-routing-rules-for-amazon-s3-bucket.html">Generating routing rules for Amazon S3 bucket</b:Button>
+                    <a target="_blank" style="coloured-link" href="http://sukharevd.net/generating-routing-rules-for-amazon-s3-bucket.html">Generating routing rules for Amazon S3 bucket</a>
                     you might want to get acquainted with.</b:HelpBlock>
             </b:Column>
         </b:Row>
