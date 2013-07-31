@@ -1,7 +1,6 @@
 package net.sukharevd.gwt.client;
 
 import com.google.gwt.core.client.EntryPoint;
-import com.google.gwt.core.client.GWT;
 import com.google.gwt.user.client.ui.RootPanel;
 
 /**
@@ -9,12 +8,14 @@ import com.google.gwt.user.client.ui.RootPanel;
  */
 public class S3routes implements EntryPoint {
 
-  private final Messages messages = GWT.create(Messages.class);
+  // private final Messages messages = GWT.create(Messages.class);
 
   /**
    * This is the entry point method.
    */
   public void onModuleLoad() {
-    RootPanel.get("converterContainer").add(new ConverterView());
+      ConverterViewImpl view = new ConverterViewImpl();
+      new ConverterViewPresenter(view);
+      RootPanel.get("converterContainer").add(view);
   }
 }

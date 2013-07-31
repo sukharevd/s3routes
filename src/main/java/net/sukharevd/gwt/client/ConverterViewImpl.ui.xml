@@ -60,7 +60,7 @@
         <b:Row>
             <b:Column offset="1" size="12">
                 <b:PageHeader>Resulting XML</b:PageHeader>
-                <b:AlertBlock ui:field="alert"
+                <b:AlertBlock ui:field="notifications"
                               type="DEFAULT"
                               close="false"
                               animation="true"
